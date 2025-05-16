@@ -23,3 +23,23 @@ Flask-Mail – To send OTP via email
 HTML/CSS – For frontend templates
 
 SMTP (Gmail) – For email delivery
+
+✅ Future Improvements
+Add OTP resend and retry limit features
+
+Store OTPs securely in a database (e.g., SQLite)
+
+Add user registration/login integration
+
+Implement session-based or token-based auth
+
+🧠 Learnings
+This project helped me understand:
+
+Flask routing and server logic
+
+Email integration with Python
+
+Authentication flow and user validation
+
+How to handle time-sensitive secure data
