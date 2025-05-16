@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify OTP</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='app.js') }}" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h2>Enter Verification Code</h2>
+            <p>We sent a 6-digit code to your email. Please enter it below.</p>
+
+            <form action="/verify" method="POST" onsubmit="combineOTP()">
+                <div class="otp-input">
+                    <input type="text" id="otp1" maxlength="1" required>
+                    <input type="text" id="otp2" maxlength="1" required>
+                    <input type="text" id="otp3" maxlength="1" required>
+                    <input type="text" id="otp4" maxlength="1" required>
+                    <input type="text" id="otp5" maxlength="1" required>
+                    <input type="text" id="otp6" maxlength="1" required>
+                </div>
+
+                <!-- Hidden input to send combined OTP -->
+                <input type="hidden" name="otp" id="otp">
+
+                <button type="submit">Verify</button>
+            </form>
+
+            <p class="resend">Didn't receive the code? <a href="/">Resend OTP</a></p>
+        </div>
+    </div>
+</body>
+</html>
